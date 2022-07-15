@@ -1,0 +1,1 @@
+cargo build && (kill -9 $(lsof -t -i tcp:7001) ; open vscode://vadimcn.vscode-lldb/launch?name=DebugActix)

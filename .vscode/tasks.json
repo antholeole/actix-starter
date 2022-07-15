@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "backend dev",
+            "command": "cargo",
+            "args": [
+                "watch",
+                "-w",
+                "src",
+                "-s",
+                "sh rerun.sh"
+            ],
+            "isBackground": true,
+            "problemMatcher": "$rustc-watch"
+        },
+        {
+            "label": "cargo build",
+            "command": "cargo",
+            "args": [
+                "build"
+            ],
+        },
+    ]
+}

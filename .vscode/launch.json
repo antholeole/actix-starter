@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "DebugActix",
+            "type": "lldb",
+            "request": "launch",
+            "program": "target/debug/actix-vsc-starter",
+            "preLaunchTask": "cargo build",
+            "postRunCommands": [
+                "process handle SIGKILL --notify true --pass true --stop false",
+                "process handle SIGTERM --notify true --pass true --stop false",
+                "process handle SIGQUIT --notify true --pass true --stop false"
+            ],
+            "sourceLanguages": [
+                "rust"
+            ],
+            "args": [],
+        },
+    ],
+}
